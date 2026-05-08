@@ -242,3 +242,28 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
 });
+
+// ── Age Gate ──────────────────────────────────────────────
+  const ageGate  = document.getElementById("ageGate");
+  const ageEnter = document.getElementById("ageEnter");
+  const ageLeave = document.getElementById("ageLeave");
+
+  if (ageGate) {
+    // show gate unless already confirmed this session
+    if (sessionStorage.getItem("ageVerified") === "yes") {
+      ageGate.classList.add("hidden");
+    }
+
+    if (ageEnter) {
+      ageEnter.addEventListener("click", () => {
+        sessionStorage.setItem("ageVerified", "yes");
+        ageGate.classList.add("hidden");
+      });
+    }
+
+    if (ageLeave) {
+      ageLeave.addEventListener("click", () => {
+        window.location.href = "index.html";
+      });
+    }
+  }
