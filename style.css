@@ -308,6 +308,16 @@ span {
   .home-img img          { width: 70vw; margin-top: 4rem; }
 }
 
+  section.home {
+    min-height: auto;          /* let content define height */
+    padding-bottom: 80px;      /* clears fixed footer */
+    padding-top: 100px;        /* clears fixed header */
+    overflow-y: auto;          /* scroll within section */
+    height: 100vh;             /* fill viewport */
+    box-sizing: border-box;
+  }
+}
+
 /* ── FOOTER ────────────────────────────────────────────── */
 
 footer {
@@ -640,6 +650,17 @@ footer {
   .filter-buttons        { top: 70px; padding: 6px 0; }
   .filter-buttons button { padding: 7px 14px; margin: 4px; font-size: 1.2rem; }
   .portfolio-container   { top: 116px; }
+}
+
+.social-icons a {
+    margin: 1.5rem 1rem 1.5rem 0;  /* was 3rem — too much vertical space */
+    width: 3.5rem;
+    height: 3.5rem;
+    font-size: 1.7rem;
+  }
+
+  .home-content h1 { font-size: 4rem; }
+  .home-content p  { font-size: 1.4rem; }
 }
 
 /* ── LIGHTBOX ──────────────────────────────────────────── */
